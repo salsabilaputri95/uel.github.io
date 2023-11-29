@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1.5%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-brand h1 a span {
+  color: darkred;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.nav-menu a:hover {
+  color: darkred;
+}
+
+.profile .btn {
+  color: wheat;
+  background: darkred;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+}
+
+.profile .btn:hover {
+  background: black;
+  color: white;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.hero-desc h1 {
+  font-size: 24px; /* Ubah sesuai kebutuhan Anda */
+  line-height: 1.5; /* Sesuaikan sesuai kebutuhan Anda */
+  text-align: left; /* Sesuaikan perataan teks sesuai kebutuhan Anda */
+}
+
+.hero-desc p {
+  font-size: 16px; /* Ubah sesuai kebutuhan Anda */
+  line-height: 1.5; /* Sesuaikan sesuai kebutuhan Anda */
+  text-align: left; /* Sesuaikan perataan teks sesuai kebutuhan Anda */
+}
+
+.img-responsive {
+  width: 100%;
+}

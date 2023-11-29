@@ -1,0 +1,673 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap");
+
+:root {
+  --primary1: #435055;
+  --primary2: #29a19c;
+  --primary3: #84c69b;
+  --light-color: #666;
+  --bg: #000000;
+  --bg1: #eee;
+  --black: #192a56;
+  --box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 55.8%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+section:nth-child(even) {
+  background: var(--bg1);
+}
+
+.sub-heading {
+  text-align: center;
+  color: var(--primary2);
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.heading {
+  text-align: center;
+  color: var(--primary1);
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--primary2);
+  font-size: 3rem;
+}
+
+.btn {
+  margin: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--primary2);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+}
+
+.btn:hover {
+  background: var(--primary3);
+  color: #eee;
+}
+
+/* navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 1rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+}
+
+header .logo {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+header .logo i {
+  color: var(--primary1);
+}
+
+header .navbar a {
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  color: var(--primary2);
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+  color: #fff;
+  background: var(--primary2);
+}
+
+header .icons i,
+header .icons a {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  width: 4.5rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--black);
+  border-radius: 50%;
+  background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover {
+  color: #fff;
+  background: var(--green);
+  transform: rotate(360deg);
+}
+
+header .icons #menu-bars {
+  display: none;
+}
+
+/* pencarian */
+#search-form {
+  position: fixed;
+  top: -110%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1004;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  transition: top 0.3s ease;
+}
+
+#search-form.active {
+  top: 0;
+}
+
+#search-form #search-box {
+  width: 50rem;
+  border-radius: 1rem solid #fff;
+  padding: 1rem 0;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: none;
+  background: none;
+}
+
+#search-form #search-box::placeholder {
+  color: #eee;
+}
+
+#search-form #search-box:-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+#search-form label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+#search-form label:hover {
+  color: var(--green);
+}
+
+#search-form #close {
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  top: 2rem;
+  right: 3rem;
+  font-size: 5rem;
+}
+
+.options {
+  display: none;
+  width: 15rem;
+  position: absolute;
+  background-color: #eee;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  z-index: 1;
+}
+
+.options ul:hover {
+  color: var(--primary2);
+}
+/* hero section */
+.home .home-slider .slide {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 5rem;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .home-slider .slide .content {
+  flex: 1 1 45rem;
+  margin-right: 2rem;
+}
+
+.home .home-slider .slide .image {
+  flex: 1 1 45rem;
+  margin-left: 2rem;
+}
+
+.home .home-slider .slide .image img {
+  width: 100%;
+}
+
+.home .home-slider .slide .image img:nth-child(2) {
+  width: 50%;
+}
+
+.home .home-slider .slide .content span {
+  color: var(--primary3);
+  font-size: 2.5rem;
+}
+
+.home .home-slider .slide .content h3 {
+  color: var(--primary1);
+  font-size: 7rem;
+}
+
+.home .home-slider .slide .content p {
+  color: var(--light-color);
+  font-size: 2.2rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary2);
+}
+
+/* room section */
+.room .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.room .box-container .box {
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 2rem;
+  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.room .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.room .box-container .box span {
+  color: var(--green);
+  font-size: 2.5rem;
+}
+
+/* about section */
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.about .row .image {
+  flex: 1 1 45rem;
+}
+
+.about .row .image img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 45rem;
+}
+
+.about .row .content .icons-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+}
+
+.about .row .content p {
+  color: var(--light-color);
+  font-size: 1.3rem;
+  padding: 0.8rem 0;
+  line-height: 1.6;
+}
+
+.about .row .content .icons-container .icons {
+  background: #eee;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex: 1 1 14rem;
+  padding: 0.1rem 0.5rem; /* Mengurangi padding kecil ke 0.3rem */
+}
+
+.about .row .content .icons-container .icons i {
+  font-size: 1.2rem;
+  color: var(--primary2);
+}
+
+.about .row .content .icons-container .icons span {
+  font-size: 1.8rem;
+  color: var(--black);
+}
+
+.about .row .content a.btn {
+  font-size: 1.4rem; /* Menambah ukuran teks tombol */
+  padding: 1rem 1.5rem; /* Menyesuaikan padding tombol */
+}
+
+/* Menu section */
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.menu h2 {
+  font-size: 3.2rem;
+  color: var(--primary3);
+  margin: 2rem;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+}
+
+.menu .box-container .box {
+  background: #fff;
+  border: 1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.menu .box-container .box .image {
+  height: 25rem;
+  width: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.menu .box-container .box .image .fa-heart {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  background: #fff;
+  border-radius: 50%;
+  color: var(--black);
+}
+
+.menu .box-container .box .image .fa-heart:hover {
+  background-color: var(--primary3);
+  color: #fff;
+}
+
+.menu .box-container .box .content {
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.menu .box-container .box .content .stars {
+  padding-bottom: 1rem;
+}
+
+.menu .box-container .box .content .stars i {
+  font-size: 1.7rem;
+  color: var(--primary2);
+}
+
+.menu .box-container .box .content .stars h3 {
+  font-size: 2.7rem;
+  color: var(--primary1);
+}
+
+.menu .box-container .box .content .stars p {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  line-height: 1.5;
+  padding: 0.5rem;
+}
+
+.menu .box-container .box .content .pice {
+  color: var(--primary2);
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+/* order */
+.order form.center-form {
+  max-width: 90rem;
+  margin: 0 auto; /* Menengahkan form */
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column; /* Mengatur elemen form menjadi tipe kolom */
+  align-items: center; /* Menengahkan elemen form vertikal */
+}
+
+.order form .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%; /* Menjadikan inputBox penuh lebar form */
+}
+
+.order form .inputBox .input {
+  width: 48%;
+}
+.order form {
+  max-width: 90rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+.order form .inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.order form .inputBox .input {
+  width: 48%;
+}
+
+.order form .inputBox .input span {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
+.order form .inputBox .input input,
+.order form .inputBox .input textarea {
+  background: #eee;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.order form .inputBox .input textarea {
+  height: 20rem;
+  resize: none;
+}
+
+.order form .btn {
+  margin-top: 0;
+}
+
+/* kontak */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #eee;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary2);
+  cursor: pointer;
+}
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .icons #menu-bars {
+    display: inline-block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  /* humberger menu */
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: #eee;
+  }
+
+  #search-form #search-box {
+    width: 90%;
+    margin: 0 1rem;
+
+    header .profile {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    header .profile .btn {
+      padding: 10px 20px;
+    }
+  }
+
+  .room .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .room .box-container .box:hover .fa-heart {
+    right: 1.5rem;
+  }
+
+  .room .box-container .box:hover .fa-eye {
+    left: 1.5rem;
+  }
+
+  .contact form {
+    padding: 1rem;
+  }
+
+  .contact .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact .input-group i {
+    margin-right: 0;
+  }
+
+  .contact .btn {
+    width: 100%;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .room .box-container .box img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  .order form .inputBox .input {
+    width: 100%;
+  }
+}
